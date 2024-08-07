@@ -1,0 +1,22 @@
+https://scambier.xyz/notes/ESLint-Setup-for-TypeScript
+1.
+npm create @eslint/config@latest
+.........
+@eslint/create-config: v1.2.0
+
+✔ How would you like to use ESLint? · problems
+✔ What type of modules does your project use? · commonjs
+✔ Which framework does your project use? · none
+✔ Does your project use TypeScript? · typescript
+✔ Where does your code run? · node
+The config that you've selected requires the following dependencies:
+
+eslint@9.x, globals, @eslint/js, typescript-eslint
+✔ Would you like to install them now? · No / Yes
+✔ Which package manager do you want to use? · npm
+
+2.
+npm add -D @stylistic/eslint-plugin
+
+3.
+see eslint.config.mjs for example

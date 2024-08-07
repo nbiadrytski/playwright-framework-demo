@@ -1,0 +1,26 @@
+{
+  "name": "playwright-framework-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test-infra2": "npx playwright test --project chromium",
+    "lint": "eslint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.8.0",
+    "@playwright/test": "^1.45.3",
+    "@stylistic/eslint-plugin": "^2.6.1",
+    "@types/node": "^22.1.0",
+    "eslint": "^9.8.0",
+    "globals": "^15.9.0",
+    "typescript-eslint": "^8.0.0",
+    "yup": "^1.4.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
