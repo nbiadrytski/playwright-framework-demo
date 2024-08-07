@@ -1,6 +1,9 @@
 import { APIResponse, test } from '@playwright/test';
-import { API_REQUEST_TIMEOUT, ApiManager, HTTP_METHOD, RequestParams, ResponseAssertParams } from '../utils/api/apiManager';
+import { API_REQUEST_TIMEOUT, ApiManager } from '../utils/api/apiManager';
 import { deepMergeObjects } from '../utils/objectUtils';
+import { RequestParams } from '../types/api/requestParams.model';
+import { HTTP_METHOD } from '../data/enums/httpMethod.enum';
+import { ResponseAssertParams } from '../types/api/responseAssertParams.model';
 
 export class BaseClient {
   protected readonly apiManager: ApiManager;

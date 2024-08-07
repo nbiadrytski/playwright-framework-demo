@@ -1,5 +1,5 @@
-import { UserModel } from '../../../../../common/types/user.model';
 import { LoginPayloadModel } from '../../../../types/auth/request/loginPayload.model';
+import { UserModel } from '../../../../types/auth/user.model';
 
 export const BaseLoginPayload = (user: UserModel): LoginPayloadModel => {
   return {
