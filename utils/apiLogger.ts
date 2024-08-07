@@ -1,7 +1,7 @@
 import { APIResponse } from '@playwright/test';
 import { RequestParams } from './apiManager';
 import { assignHeaders, requestUrl } from './apiUtils';
-import { SERVICE_NAME } from '../../common/data/enums/appName';
+import { SERVICE_NAME } from '../data/enums/appName';
 
 export async function logRequestResponse(
   requestParams: RequestParams,

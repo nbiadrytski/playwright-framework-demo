@@ -1,5 +1,5 @@
 import { APIResponse } from '@playwright/test';
-import { SERVICE_NAME } from '../../common/data/enums/appName';
+import { SERVICE_NAME } from '../data/enums/appName';
 import { LoginPayloadModel } from '../types/auth/request/loginPayload.model';
 import { BaseClient } from './base.client';
 import { HTTP_METHOD } from '../utils/apiManager';

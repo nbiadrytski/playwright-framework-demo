@@ -1,5 +1,5 @@
-import { SERVICE_NAME } from '../../common/data/enums/appName';
-import { getServiceUrl } from '../../common/utils/envUrls';
+import { SERVICE_NAME } from '../data/enums/appName';
+import { getServiceUrl } from './envUrls';
 
 export const requestUrl = (
   serviceName: SERVICE_NAME, endpoint: string

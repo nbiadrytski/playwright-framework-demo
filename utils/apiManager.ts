@@ -2,8 +2,8 @@ import { ReadStream } from 'fs';
 import { ObjectSchema } from 'yup';
 import { APIRequestContext, APIResponse, request, test } from '@playwright/test';
 import { logRequestResponse } from './apiLogger';
-import { getServiceUrl } from '../../common/utils/envUrls';
-import { SERVICE_NAME } from '../../common/data/enums/appName';
+import { getServiceUrl } from './envUrls';
+import { SERVICE_NAME } from '../data/enums/appName';
 import { checkStatusCode, validateResponseSchema } from './apiAssertions';
 import { requestUrl } from './apiUtils';
 

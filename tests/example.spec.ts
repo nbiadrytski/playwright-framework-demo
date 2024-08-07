@@ -1,10 +1,10 @@
-import { AuthEndpoint } from '../api/data/endpoints';
-import { BaseLoginPayload } from '../api/data/objects/auth/payload/baseLogin.object';
-import { BaseLoginResponse } from '../api/data/objects/auth/response/baseLogin.object';
-import { CurrentAuthUserResponse } from '../api/data/objects/auth/response/currentAuthUser.object';
-import { fixtures as testLogin } from '../api/fixtures/base.fixture';
-import { AUTH_PASSWORD, AUTH_USERNAME } from '../common/data/constants/env';
-import { compareResponses } from '../common/utils/assertionUtils';
+import { AuthEndpoint } from '../data/endpoints';
+import { BaseLoginPayload } from '../data/objects/auth/payload/baseLogin.object';
+import { BaseLoginResponse } from '../data/objects/auth/response/baseLogin.object';
+import { CurrentAuthUserResponse } from '../data/objects/auth/response/currentAuthUser.object';
+import { fixtures as testLogin } from '../fixtures/base.fixture';
+import { AUTH_PASSWORD, AUTH_USERNAME } from '../data/envVars';
+import { compareResponses } from '../utils/assertionUtils';
 
 testLogin.only(`Проверить ответ POST ${AuthEndpoint.Login}`, async ({ authClient }) => {
   const { response } = await authClient.login(

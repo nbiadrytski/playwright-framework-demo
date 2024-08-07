@@ -1,4 +1,4 @@
-import { ENV_TYPES } from '../enums/envType';
+import { ENV_TYPES } from './enums/envType';
 
 export const ENV_TYPE: ENV_TYPES = process.env.ENV_TYPE as ENV_TYPES;
 
