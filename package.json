@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test-infra2": "npx playwright test --project chromium",
-    "lint": "eslint"
+    "test-infra2": "npx playwright test --project api-tests",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
   },
   "keywords": [],
   "author": "",

@@ -1,5 +1,5 @@
 import { APIResponse, expect, test } from '@playwright/test';
-import { HTTP_METHOD } from './apiManager';
+import { HTTP_METHOD } from './api/apiManager';
 import { ObjectSchema, ValidationError } from 'yup';
 
 export async function checkStatusCode(

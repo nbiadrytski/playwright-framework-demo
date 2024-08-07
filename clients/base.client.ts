@@ -1,5 +1,5 @@
 import { APIResponse, test } from '@playwright/test';
-import { API_REQUEST_TIMEOUT, ApiManager, HTTP_METHOD, RequestParams, ResponseAssertParams } from '../utils/apiManager';
+import { API_REQUEST_TIMEOUT, ApiManager, HTTP_METHOD, RequestParams, ResponseAssertParams } from '../utils/api/apiManager';
 import { deepMergeObjects } from '../utils/objectUtils';
 
 export class BaseClient {

@@ -2,9 +2,9 @@ import { APIResponse } from '@playwright/test';
 import { SERVICE_NAME } from '../data/enums/appName';
 import { LoginPayloadModel } from '../types/auth/request/loginPayload.model';
 import { BaseClient } from './base.client';
-import { HTTP_METHOD } from '../utils/apiManager';
 import { AuthEndpoint } from '../data/endpoints';
 import { LoginSchema } from '../data/responseSchema/auth/login.schema';
+import { HTTP_METHOD } from '../data/enums/httpMethod.enum';
 
 export class AuthClient extends BaseClient {
   private bearerToken: string;
@@ -22,7 +22,7 @@ export class AuthClient extends BaseClient {
       HTTP_METHOD.POST,
       { statusCode: 200, schema: LoginSchema }
     );
-    const token = (await response.json()).token;
+    const token = (await response.json())?.token;
     this.bearerToken = token;
 
     return { response, token };
