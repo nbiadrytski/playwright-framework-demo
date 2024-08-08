@@ -14,16 +14,35 @@ export default defineConfig({
   reporter: [
     ['line'],
     ['html'],
+    [
+      'allure-playwright',
+      {
+        detail: false,
+        outputFolder: './allure-results',
+        suiteTitle: false,
+      },
+    ],
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
+    actionTimeout: 0,
+    baseURL: 'https://playwright.dev',
     trace: 'retain-on-failure',
+    headless: false,
+    video: 'on',
+    screenshot: 'on',
   },
 
   projects: [
     {
       name: 'api-tests',
+      use: { },
+      testDir: './api/tests',
+    },
+    {
+      name: 'ui-tests',
       use: { ...devices['Desktop Chrome'] },
+      testDir: './web/tests',
     },
   ],
 });

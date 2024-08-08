@@ -4,9 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test-infra2": "npx playwright test --project api-tests",
+    "test-api": "npx playwright test --project api-tests",
+    "test-ui": "npx playwright test --project ui-tests",
     "lint": "eslint",
-    "lint:fix": "eslint --fix"
+    "lint:fix": "eslint --fix",
+    "clean-report": "rimraf allure-results && rimraf allure-report",
+    "generate-report": "npx allure generate allure-results -o allure-report --clean && npx allure open allure-report",
+    "open-report": "npx allure open allure-report"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +26,7 @@
     "yup": "^1.4.0"
   },
   "dependencies": {
+    "allure-playwright": "^3.0.0-beta.9",
     "dotenv": "^16.4.5"
   }
 }
