@@ -16,9 +16,9 @@ export class ApiManager {
     requestParams: RequestParams,
     responseAssertParams: ResponseAssertParams
   ): Promise<APIResponse> {
-    return test.step(this.getStepName(requestParams), async () => {
-      requestParams.options.method = method;
+    requestParams.options.method = method;
 
+    return test.step(this.getStepName(requestParams), async () => {
       const context: APIRequestContext = await request.newContext({ timeout: API_REQUEST_TIMEOUT });
       const response: APIResponse = await context.fetch(
         `${getServiceUrl(requestParams.serviceName as SERVICE_NAME)}/${requestParams.endpoint}`,
