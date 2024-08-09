@@ -1,3 +1,5 @@
+web tutorial https://habr.com/ru/articles/712084/
+
 https://scambier.xyz/notes/ESLint-Setup-for-TypeScript
 1.
 npm create @eslint/config@latest
