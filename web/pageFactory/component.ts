@@ -55,7 +55,7 @@ export abstract class Component {
   }
 
   async click(locatorProps: LocatorProps = {}): Promise<void> {
-    await test.step(`Clicking the ${this.typeOf} with name "${this.componentName}"`, async () => {
+    await test.step(`Кликнуть ${this.typeOf} with name "${this.componentName}"`, async () => {
       const locator = this.getLocator(locatorProps);
       await locator.click();
     });
